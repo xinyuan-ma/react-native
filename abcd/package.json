@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "bundle-ios":"node node_modules/react-native/local-cli/cli.js bundle --entry-file index.js  --platform ios --dev false --bundle-output ./bundle/ios/index.ios.jsbundle --assets-dest ./bundle/ios"
   },
   "dependencies": {
     "react": "16.8.6",
