@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View ,Image } from 'react-native';
+import {scaleSize, scaleHeight, setSpText, setSpText2} from '../../layout'
 
-
+console.log(setSpText(20));
+console.log(setSpText2(20), '111');
+console.log(scaleSize(20));
+console.log(scaleHeight(20));
 export default class Header extends Component {
     state = {
         text: ''
@@ -11,15 +15,15 @@ export default class Header extends Component {
         return (
             <View style={styles.bigBlue}>
                 <Text style={styles.text}>上海</Text>
-                <Image style={styles.triangle} source={require('./static/image/icon_down.png')} />
+                <Image style={styles.triangle} source={require('../image/icon_down.png')} />
                 <TextInput
                     style={styles.input}
                     placeholder="input"
                     onChangeText={(text) => this.setState({text})}
                     value={this.state.text}
                 />
-                <Image style={[styles.img, styles.imgFirst]} source={require('./static/image/map.png')} />
-                <Image style={styles.img} source={require('./static/image/message.png')} />
+                <Image style={[styles.img, styles.imgFirst]} source={require('../image/map.png')} />
+                <Image style={styles.img} source={require('../image/message.png')} />
             </View>
         );
     }
@@ -27,15 +31,14 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     bigBlue: {
-        marginTop: 25,
+        marginTop: scaleSize(58),
         color: 'blue',
         fontWeight: 'bold',
-        fontSize: 30,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: 'row',
-        paddingLeft: 15,
-        paddingRight: 17
+        paddingLeft: scaleSize(30),
+        paddingRight: scaleSize(34)
     },
     triangle: {
         width: 10,
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     text: {
-        // marginRight: 15
+        fontSize: scaleSize(22)
     },
     input: {
         width: 240,

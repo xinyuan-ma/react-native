@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View ,Image } from 'react-native';
+import {scaleSize, scaleHeight, setSpText, setSpText2} from '../../layout'
+import { Dimensions } from 'react-native';
 export default class BasisOption extends Component {
 
     render() {
@@ -13,26 +15,24 @@ export default class BasisOption extends Component {
 }
 
 const styles = StyleSheet.create({
-    bigBlue: {
-        flex: 1,
-        justifyContent: 'space-between',
-        flexDirection: 'row',
-        flexWrap: 'wrap'
-    },
     basisOption: {
-        width: 90,
-        height: 50,
+        width: Dimensions.get('window').width / 4,
+        // height: 50,
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 30
+        paddingBottom: scaleHeight(46)
+        // borderStyle: 'solid',
+        // borderWidth: 1,
+        // borderColor: 'red'
     },
     imgStyle: {
-        width: 30,
-        height: 30
+        width: scaleSize(60),
+        height: scaleSize(60)
     },
     textTest: {
-        fontSize: 11,
+        marginTop: scaleSize(8),
+        fontSize: setSpText(22),
         textAlign: 'center'
     }
 });

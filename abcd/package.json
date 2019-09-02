@@ -6,11 +6,12 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "bundle-ios":"node node_modules/react-native/local-cli/cli.js bundle --entry-file index.js  --platform ios --dev false --bundle-output ./bundle/ios/index.ios.jsbundle --assets-dest ./bundle/ios"
+    "bundle-ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file index.js  --platform ios --dev false --bundle-output ./bundle/ios/index.ios.jsbundle --assets-dest ./bundle/ios"
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-swiper": "^1.5.14"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
