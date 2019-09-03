@@ -58,7 +58,7 @@ const styles = StyleSheet.create ({
         fontSize: 18,
         marginLeft: 15,
         marginBottom: 15,
-        marginTop: 40
+        marginTop: 30
     },
     detail: {
         fontSize: 12,
