@@ -6,37 +6,39 @@ import OptionsBar from './static/view/optionsBar'
 import Swiper from './static/view/swiper'
 import NineGrid from './static/view/nineGrid'
 import Tabbar from './static/view/tabbar'
-
+import {scaleSize, scaleHeight} from './layout'
 
 let screenW = Dimensions.get('window').width;
-import {scaleSize, scaleHeight} from './layout'
+
 console.log(screenW, 'screenW');
 export default class HelloWorldApp extends Component {
     render() {
         return (
-            <ScrollView>
-                <View style={styles.container}>
-                    <Header></Header>
-                    <View style={styles.options}>
-                        <OptionsBar></OptionsBar>
+            <View>
+                <ScrollView>
+                    <View style={styles.container}>
+                        <Header></Header>
+                        <View style={styles.options}>
+                            <OptionsBar></OptionsBar>
+                        </View>
+                        <Text style={styles.title}>这里是上海<Text style={styles.detail}>   海纳百川 追求卓越</Text></Text>
+                        <ImageBackground style={styles.playContent} source={require('./static/image/video.jpg')} imageStyle={{borderRadius:4}}>
+                            <Image style={styles.play} source={require('./static/image/play_district.png')}></Image>
+                        </ImageBackground>
+                        <Swiper></Swiper>
+                        <Text style={styles.bigTitle}>上海品牌<Text style={styles.detail}>   开明睿智 大气谦和</Text></Text>
+                        <NineGrid></NineGrid>
                     </View>
-                    <Text style={styles.title}>这里是上海<Text style={styles.detail}>   海纳百川 追求卓越</Text></Text>
-                    <ImageBackground style={styles.playContent} source={require('./static/image/video.jpg')} imageStyle={{borderRadius:4}}>
-                        <Image style={styles.play} source={require('./static/image/play_district.png')}></Image>
-                    </ImageBackground>
-                    <Swiper></Swiper>
-                    <Text style={styles.bigTitle}>上海品牌<Text style={styles.detail}>   开明睿智 大气谦和</Text></Text>
-                    <NineGrid></NineGrid>
-                    <Tabbar></Tabbar>
-                </View>
-            </ScrollView>
+                </ScrollView>
+                <Tabbar></Tabbar>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create ({
     container: {
-        flex: 1
+        marginBottom: scaleHeight(128)
     },
     options: {
         paddingTop: scaleHeight(46)
@@ -54,7 +56,8 @@ const styles = StyleSheet.create ({
         marginTop: 40
     },
     detail: {
-        fontSize: 12
+        fontSize: 12,
+        color: '#666666'
     },
     playContent: {
         width: 345,

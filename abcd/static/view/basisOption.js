@@ -6,9 +6,9 @@ export default class BasisOption extends Component {
 
     render() {
         return (
-            <View style={styles.basisOption} key={this.props.item.title}>
-                <Image style={styles.imgStyle} source={this.props.item.icon}/>
-                <Text style={styles.textTest} >{this.props.item.title}</Text>
+            <View style={styles.basisOption} key={this.props.item.title + '11'}>
+                <Image style={styles.imgStyle} key={this.props.item.title + 1} source={this.props.item.icon}/>
+                <Text style={styles.textTest} key={this.props.item.title + this.props.item.title}>{this.props.item.title}</Text>
             </View>
         );
     }
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     textTest: {
         marginTop: scaleSize(8),
         fontSize: setSpText(22),
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#333333'
     }
 });
 

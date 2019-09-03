@@ -57,8 +57,10 @@ const styles = StyleSheet.create({
 	text: {
 		position: 'absolute',
 		fontSize: setSpText(32),
-		top: 12,
-		left: 18
+		top: scaleSize(24),
+		left: scaleSize(18),
+		fontWeight: '500',
+		color: '#ffffff'
 	}
 });
 

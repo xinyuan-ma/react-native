@@ -17,14 +17,13 @@ export default class OptionsBar extends Component {
     }
     render() {
         return (
-            <View style={styles.bigBlue}>{details.map(item =>  <BasisOption item={item}></BasisOption>)}</View>
+            <View style={styles.bigBlue}>{details.map((item, index) =>  <BasisOption item={item} key={index}></BasisOption>)}</View>
         );
     }
 }
 
 const styles = StyleSheet.create({
     bigBlue: {
-        marginTop: 10,
         flex: 1,
         justifyContent: 'space-between',
         flexDirection: 'row',
@@ -37,12 +36,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginBottom: 30
-    },
-    triangle: {
-        width: 10,
-        height: 6,
-        color: '#000000',
-        marginRight: 10
     },
     text: {
         // marginRight: 15
