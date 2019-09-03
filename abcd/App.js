@@ -6,6 +6,9 @@ import OptionsBar from './static/view/optionsBar'
 import Swiper from './static/view/swiper'
 import NineGrid from './static/view/nineGrid'
 import Tabbar from './static/view/tabbar'
+import Brand from './static/view/brand'
+import Ysh from './static/view/ysh'
+
 import {scaleSize, scaleHeight} from './layout'
 
 let screenW = Dimensions.get('window').width;
@@ -18,16 +21,17 @@ export default class HelloWorldApp extends Component {
                 <ScrollView>
                     <View style={styles.container}>
                         <Header></Header>
-                        <View style={styles.options}>
-                            <OptionsBar></OptionsBar>
-                        </View>
+                        <OptionsBar></OptionsBar>
                         <Text style={styles.title}>这里是上海<Text style={styles.detail}>   海纳百川 追求卓越</Text></Text>
                         <ImageBackground style={styles.playContent} source={require('./static/image/video.jpg')} imageStyle={{borderRadius:4}}>
                             <Image style={styles.play} source={require('./static/image/play_district.png')}></Image>
                         </ImageBackground>
                         <Swiper></Swiper>
-                        <Text style={styles.bigTitle}>上海品牌<Text style={styles.detail}>   开明睿智 大气谦和</Text></Text>
+                        <Text style={styles.bigTitle}>我喜欢上海<Text style={styles.detail}>   开明睿智 大气谦和</Text></Text>
                         <NineGrid></NineGrid>
+                        <Text style={styles.bigTitle}>上海品牌<Text style={styles.detail}>   持续更新中</Text></Text>
+                        <Brand></Brand>
+                        <Ysh></Ysh>
                     </View>
                 </ScrollView>
                 <Tabbar></Tabbar>
@@ -38,10 +42,11 @@ export default class HelloWorldApp extends Component {
 
 const styles = StyleSheet.create ({
     container: {
-        marginBottom: scaleHeight(128)
+        marginBottom: scaleHeight(90),
+        backgroundColor: '#FFFFFF'
     },
     options: {
-        paddingTop: scaleHeight(46)
+
     },
     title: {
         fontSize: 18,

@@ -48,11 +48,11 @@ const styles = StyleSheet.create({
 		flexWrap: 'wrap',
 		position: 'absolute',
 		zIndex: 2,
-		bottom: 0
+		bottom: 0,
+		height: scaleHeight(128)
 	},
     bigBlue: {
     	width: (Dimensions.get('window').width) / 5,
-		height: scaleHeight(128),
 		position: 'relative',
 		alignItems: 'center',
 		justifyContent: 'center'

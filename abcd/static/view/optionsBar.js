@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View ,Image } from 'react-native';
 import BasisOption from './basisOption'
+import { scaleHeight } from '../../layout';
 const details = [
     {title:'资讯',icon:require('../image/optionsBar/icon_zixun.png')},
     {title:'酒店',icon:require('../image/optionsBar/icon_jiudian.png')},
@@ -24,6 +25,7 @@ export default class OptionsBar extends Component {
 
 const styles = StyleSheet.create({
     bigBlue: {
+        paddingTop: scaleHeight(46),
         flex: 1,
         justifyContent: 'space-between',
         flexDirection: 'row',

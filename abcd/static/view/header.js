@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     input: {
         width: 240,
         height: 28,
-        backgroundColor: '#F1F1F1',
+        backgroundColor: '#F2F2F2',
         borderRadius: 14,
         textAlign: "center",
         alignItems: "center",
