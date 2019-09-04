@@ -6,6 +6,7 @@ import OptionsBar from './static/view/optionsBar'
 import Swiper from './static/view/swiper'
 import NineGrid from './static/view/nineGrid'
 import Tabbar from './static/view/tabbar'
+import NativeTabbar from './static/view/nativeTabbar'
 import Brand from './static/view/brand'
 import Ysh from './static/view/ysh'
 
@@ -34,7 +35,8 @@ export default class HelloWorldApp extends Component {
                         <Ysh></Ysh>
                     </View>
                 </ScrollView>
-                <Tabbar></Tabbar>
+                {/*<Tabbar></Tabbar>*/}
+                <NativeTabbar></NativeTabbar>
             </View>
         );
     }
