@@ -27,7 +27,7 @@ export default class OptionsBar extends Component {
     render() {
         return (
         	<View style={styles.container}>
-				{details.map(item =>  <View style={styles.bigBlue}><Image style={styles.image} key={item.title} source={item.icon}></Image><Text style={styles.text} key={item.title + 1}>{item.title}</Text></View>)}
+				{details.map((item, index) =>  <View style={styles.bigBlue} key={index}><Image style={styles.image} key={item.title} source={item.icon}></Image><Text style={styles.text} key={item.title + 1}>{item.title}</Text></View>)}
 			</View>
         );
     }

@@ -48,7 +48,8 @@ const styles = StyleSheet.create({
 	swipersContent: {
 		width: 345,
 		height: 110,
-		position: 'relative'
+		position: 'relative',
+		justifyContent: 'center'
 	},
     img: {
         marginHorizontal: 15,

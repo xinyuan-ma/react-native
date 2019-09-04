@@ -23,7 +23,6 @@ var styles = StyleSheet.create({
 		marginBottom: scaleHeight(30)
 	},
 	img: {
-		fontWeight: '600',
 		width: scaleSize(74),
 		height: scaleHeight(32),
 		marginBottom: scaleHeight(20)

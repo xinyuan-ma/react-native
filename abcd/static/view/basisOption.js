@@ -3,7 +3,10 @@ import { StyleSheet, Text, TextInput, View ,Image } from 'react-native';
 import {scaleSize, scaleHeight, setSpText, setSpText2} from '../../layout'
 import { Dimensions } from 'react-native';
 export default class BasisOption extends Component {
-
+    constructor (props) {
+        super(props)
+        console.log(props, 'props');
+    }
     render() {
         return (
             <View style={styles.basisOption} key={this.props.item.title + '11'}>
